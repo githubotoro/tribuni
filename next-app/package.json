@@ -1,0 +1,40 @@
+{
+	"name": "next-app",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"clsx": "^2.0.0",
+		"ethers": "5.7.2",
+		"firebase": "^10.5.2",
+		"jsonwebtoken": "^9.0.2",
+		"next": "14.0.3",
+		"node-telegram-bot-api": "^0.63.0",
+		"nodemailer": "^6.9.8",
+		"postgres": "^3.4.3",
+		"react": "^18",
+		"react-dom": "^18",
+		"react-hot-toast": "^2.4.1",
+		"react-markdown": "^9.0.1",
+		"react-otp-input": "^3.1.0",
+		"remark-gfm": "^4.0.0",
+		"sha1": "^1.1.1",
+		"sonner": "^1.2.0",
+		"sooner": "^1.1.4",
+		"telegraf": "^4.15.0",
+		"uuid": "^9.0.1",
+		"validator": "^13.11.0",
+		"zustand": "^4.4.4"
+	},
+	"devDependencies": {
+		"@tailwindcss/typography": "^0.5.10",
+		"autoprefixer": "^10",
+		"postcss": "^8",
+		"tailwindcss": "^3"
+	}
+}
