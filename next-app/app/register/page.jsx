@@ -23,6 +23,20 @@ export default function Page() {
           />
         </div>
 
+        {/* <div className="relative w-full">
+					<div className="absolute top-0 left-0 flex flex-row mt-1 space-x-1 text-xs text-isWhite font-500">
+						<div className="px-1 rounded-md bg-isRedLight">
+							100 protocols
+						</div>
+					</div>
+
+					<div className="absolute top-0 right-0 flex flex-row mt-1 space-x-1 text-xs text-isWhite font-500">
+						<div className="px-1 rounded-md bg-isOrangeLight">
+							200 proposals
+						</div>
+					</div>
+				</div> */}
+
         <div className="relative -mt-12 border-4 rounded-full w-fit h-fit border-isWhite">
           <div className="w-20 h-20 overflow-hidden rounded-full bg-isSystemLightSecondary ">
             <Image src={Logov1} alt="logo" className="object-cover w-20 h-20" />
@@ -38,6 +52,10 @@ export default function Page() {
       </h2>
 
       <RegistrationForm />
+
+      {/* <div className="w-full mt-8 bg-isSystemLightSecondary h-36">
+					With Tribuni
+				</div> */}
     </div>
   );
 }

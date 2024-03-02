@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
+// import { toast } from "sonner";
 import toast from "react-hot-toast";
 import clsx from "clsx";
 import { ANIMATE, MAX_WIDTH, TOAST_BASE } from "@/components/constants";
@@ -101,13 +102,112 @@ export const RegistrationForm = () => {
         if (res.code === 201) {
           setStatus("REDIRECTING");
 
+          // toast.custom(
+          //   (t) => (
+          //     <div className={TOAST_BASE}>
+          //       <div className="flex flex-row items-center w-full space-x-1">
+          //         <div className="px-1 text-sm rounded-lg bg-isGreenLight text-isWhite font-500">
+          //           Success
+          //         </div>
+          //         <div className="px-1 text-base leading-tight rounded-lg grow text-isLabelLightPrimary font-400">
+          //           Welcome to Tribuni.
+          //         </div>
+
+          //         <button
+          //           className={clsx(
+          //             "leading-tight px-2 py-[0.1rem] text-sm rounded-md bg-isSystemLightSecondary text-isLabelLightSecondary flex flex-row items-center font-500 hover:bg-isSystemLightSecondary/50",
+          //             ANIMATE
+          //           )}
+          //           onClick={() => toast.dismiss(t)}
+          //         >
+          //           <div>Dismiss</div>
+          //           <Cancel
+          //             classes={clsx(
+          //               "w-4 h-4 fill-isLabelLightSecondary -mr-1 ml-1"
+          //             )}
+          //           />
+          //         </button>
+          //       </div>
+          //     </div>
+          //   ),
+          //   {
+          //     duration: 3000,
+          //   }
+          // );
+
           toast.success("Registration successful.");
 
           setUserStatus(true);
           setRefreshUser(!refreshUser);
         } else if (res.code === 401) {
+          // toast.custom(
+          //   (t) => (
+          //     <div className={TOAST_BASE}>
+          //       <div className="flex flex-row items-center w-full space-x-1">
+          //         <div className="px-1 text-sm rounded-lg bg-isRedLight text-isWhite font-500">
+          //           Error
+          //         </div>
+          //         <div className="px-1 text-base leading-tight rounded-lg grow text-isLabelLightPrimary font-400">
+          //           Invalid Invite Code!
+          //         </div>
+
+          //         <button
+          //           className={clsx(
+          //             "leading-tight px-2 py-[0.1rem] text-sm rounded-md bg-isSystemLightSecondary text-isLabelLightSecondary flex flex-row items-center font-500 hover:bg-isSystemLightSecondary/50",
+          //             ANIMATE
+          //           )}
+          //           onClick={() => toast.dismiss(t)}
+          //         >
+          //           <div>Dismiss</div>
+          //           <Cancel
+          //             classes={clsx(
+          //               "w-4 h-4 fill-isLabelLightSecondary -mr-1 ml-1"
+          //             )}
+          //           />
+          //         </button>
+          //       </div>
+          //     </div>
+          //   ),
+          //   {
+          //     duration: 3000,
+          //   }
+          // );
+
           toast.error("Invalid invite code.");
         } else {
+          // toast.custom(
+          //   (t) => (
+          //     <div className={TOAST_BASE}>
+          //       <div className="flex flex-row items-center w-full space-x-1">
+          //         <div className="px-1 text-sm rounded-lg bg-isRedLight text-isWhite font-500">
+          //           Error
+          //         </div>
+          //         <div className="px-1 text-base leading-tight rounded-lg grow text-isLabelLightPrimary font-400">
+          //           Something Went Wrong!
+          //         </div>
+
+          //         <button
+          //           className={clsx(
+          //             "leading-tight px-2 py-[0.1rem] text-sm rounded-md bg-isSystemLightSecondary text-isLabelLightSecondary flex flex-row items-center font-500 hover:bg-isSystemLightSecondary/50",
+          //             ANIMATE
+          //           )}
+          //           onClick={() => toast.dismiss(t)}
+          //         >
+          //           <div>Dismiss</div>
+          //           <Cancel
+          //             classes={clsx(
+          //               "w-4 h-4 fill-isLabelLightSecondary -mr-1 ml-1"
+          //             )}
+          //           />
+          //         </button>
+          //       </div>
+          //     </div>
+          //   ),
+          //   {
+          //     duration: 3000,
+          //   }
+          // );
+
           toast.error("Something went wrong.");
         }
 
@@ -171,6 +271,15 @@ export const RegistrationForm = () => {
             </button>
           )}
         </div>
+
+        {/* <div className="w-full text-xs italic text-center text-isLabelLightSecondary font-400 !mt-1">
+          Don't have invite code? Request one{" "}
+          <span className="underline text-isBlueLight underline-offset-2 font-500">
+            here
+          </span>
+        </div> */}
+
+        {/* <hr className="w-full rounded-full bg-isSeparatorLight !mt-5 !mb-3" /> */}
 
         <button
           id="submit"

@@ -55,6 +55,59 @@ export const RegisterUser = async ({ inviteCode, username, chatid }) => {
         };
 
         await fetch(`${process.env.NGROK_URL}/api/v4/bot`, options);
+
+        // await bot.sendMessage(
+        //   chatid,
+        //   `Welcome to the Tribuni Family! 👋 \n\nYou are now officially a part of our growing network. 🌐 \n\nI'm the governance bot -- your goto companion for all things governance. What's on your mind? 👀`,
+        //   {
+        //     reply_markup: {
+        //       inline_keyboard: [
+        //         [
+        //           {
+        //             text: "Browse Protocols",
+        //             web_app: {
+        //               url: `${process.env.NGROK_URL}/protocols?username=${username}&chatid=${chatid}`,
+        //             },
+        //           },
+        //         ],
+        //         [
+        //           {
+        //             text: "Edit Settings",
+        //             web_app: {
+        //               url: `${process.env.NGROK_URL}/settings?username=${username}&chatid=${chatid}`,
+        //             },
+        //           },
+        //         ],
+        //         [
+        //           {
+        //             text: "Manage Subscriptions",
+        //             web_app: {
+        //               url: `${process.env.NGROK_URL}/subscriptions?username=${username}&chatid=${chatid}`,
+        //             },
+        //           },
+        //         ],
+        //         [
+        //           {
+        //             text: "View Bookmarks",
+        //             web_app: {
+        //               url: `${process.env.NGROK_URL}/bookmarks?username=${username}&chatid=${chatid}`,
+        //             },
+        //           },
+        //         ],
+        //         [
+        //           {
+        //             text: "Social Directory",
+        //             web_app: {
+        //               url: `${process.env.NGROK_URL}/directory?username=${username}&chatid=${chatid}`,
+        //             },
+        //           },
+        //         ],
+        //       ],
+        //       resize_keyboard: true,
+        //       one_time_keyboard: false,
+        //     },
+        //   }
+        // );
       } catch (err) {
         console.log(err);
       }
@@ -64,6 +117,39 @@ export const RegisterUser = async ({ inviteCode, username, chatid }) => {
         message: "Registration successful",
       };
     }
+
+    // try {
+    // 	await bot.sendMessage(
+    // 		chatid,
+    // 		`Welcome to the Civitas Family! 👋 \n\nYou are now officially a part of our growing network. 🌐 \n\nI'm the governance bot -- your goto companion for all things governance. What's on your mind? 👀`,
+    // 		{
+    // 			reply_markup: {
+    // 				inline_keyboard: [
+    // 					[
+    // 						{
+    // 							text: "Browse Protocols",
+    // 							web_app: {
+    // 								url: `${process.env.NGROK_URL}/protocols?username=${username}&chatid=${chatid}`,
+    // 							},
+    // 						},
+    // 					],
+    // 					[
+    // 						{
+    // 							text: "Manage Subscriptions",
+    // 							web_app: {
+    // 								url: `${process.env.NGROK_URL}/manage?username=${username}&chatid=${chatid}`,
+    // 							},
+    // 						},
+    // 					],
+    // 				],
+    // 				resize_keyboard: true,
+    // 				one_time_keyboard: false,
+    // 			},
+    // 		}
+    // 	);
+    // } catch (err) {
+    // 	console.log(err);
+    // }
   } catch (err) {
     console.log(err);
     return {
